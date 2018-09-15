@@ -9,9 +9,30 @@
  * @notions String methods
  * https://github.com/nan-academy/refs/blob/master/js-training/methods.md#string---transform
  */
+function cutFirst(s) {
+	return s.slice(2);
+}
+
+function cutLast(s) {
+	return s.slice(0, -2);
+}
+
+function cutFirstLast(s) {
+	return cutLast(cutFirst(s));
+}
 
 //* Begin of tests
 const assert = require('assert')
 
-assert.fail('You must write your own tests')
+assert.strictEqual(cutFirst('assert'), 'sert');
+assert.strictEqual(cutFirst('as'), '');
+assert.strictEqual(cutFirst(''), '');
+
+assert.strictEqual(cutLast('assert'), 'asse');
+assert.strictEqual(cutLast('as'), '');
+assert.strictEqual(cutLast(''), '');
+
+assert.strictEqual(cutFirstLast('assert'), 'se');
+assert.strictEqual(cutFirstLast('as'), '');
+assert.strictEqual(cutFirstLast(''), '');
 // End of tests */
