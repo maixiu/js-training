@@ -10,10 +10,24 @@
  *
  */
 
+function jadenCase(s) {
+	let words = s.split(' ');
+	let jadenWords = [];
+	for (let word of words) {
+		if (word.length > 0) {
+			jadenWords.push(word[0].toUpperCase() + word.substring(1).toLowerCase());
+		} else {
+			jadenWords.push('');
+		}
+	}
 
+	return jadenWords.join(' ');
+}
 
 //* Begin of tests
 const assert = require('assert')
 
-assert.fail('You must write your own tests')
+assert.strictEqual(jadenCase('How are you ?'), 'How Are You ?');
+assert.strictEqual(jadenCase('hOwaRR    You'), 'Howarr    You');
+assert.strictEqual(jadenCase(''), '');
 // End of tests */
