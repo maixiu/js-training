@@ -10,6 +10,13 @@
  */
 
 // Your code :
+function abs(num) {
+	let absolute = num;
+	if (num < 0) {
+		absolute = -num;
+	}
+	return absolute;
+}
 
 //* Begin of tests
 const assert = require('assert')
