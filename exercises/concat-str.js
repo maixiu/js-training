@@ -7,6 +7,9 @@
  */
 
 // Your code :
+function concatStr(t1, t2) {
+	return t1 + t2;
+}
 
 //* Begin of tests
 const assert = require('assert')
