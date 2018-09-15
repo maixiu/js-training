@@ -10,6 +10,18 @@
  */
 
 // Your code :
+function multiply(n1, n2) {
+	var sum = 0;
+	if (Math.abs(n2) > 0) {
+		sum = n1 + multiply(n1, Math.abs(n2) - 1);
+	}
+
+	if (n2 < 0) {
+		sum = -sum;
+	}
+	
+	return sum;
+}
 
 //* Begin of tests
 const assert = require('assert')
